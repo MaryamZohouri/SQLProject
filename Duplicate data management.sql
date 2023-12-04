@@ -22,6 +22,9 @@ SELECT 4,NULL
 
 select * from #table
 
+--To see the structure of data in Big Data
+select Top(20) PERCENT person_sales_order, sales_order from #table
+
 --Concatenate all orders for each customer
 SELECT person_sales_order, sales_order = STUFF((SELECT N', ' + sales_order 
   FROM #table AS p2
